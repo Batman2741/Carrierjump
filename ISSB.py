@@ -1,14 +1,10 @@
-```python
 import json
 import logging
 import requests
 
-# Set up logging for your plugin
-# You'll see these messages in EDMC's log window
-LOGGER = logging.getLogger(__name__)
+LOGGER = logging.getLogger(ISSB)
 
 # --- CONFIGURATION ---
-# Replace this with the Webhook URL you copied from Discord!
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1528640289030541392/o7akgcvoXeOj5nFDT5RJd7G64gvgi35rGlMZBcWFJ7m6aWNDDiNNWGxh28dPrSy5xcvd"
 # --- END CONFIGURATION ---
 
@@ -42,17 +38,15 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
         except Exception as e:
             LOGGER.error(f"An unexpected error occurred: {e}")
 
-# This is an optional function, but good for debugging.
-# It's called when EDMC loads your plugin.
 def plugin_start(plugin_dir):
     LOGGER.info("FleetCarrierDiscord plugin started.")
-    return "FleetCarrierDiscord" # Return the name of your plugin
+    return "FleetCarrierDiscord" # Return the name of plugin
 
-# This is an optional function, called when EDMC stops your plugin.
+# This is an optional function, called when EDMC stops plugin.
 def plugin_stop():
     LOGGER.info("FleetCarrierDiscord plugin stopped.")
 
-# This is an optional function, called when EDMC reloads your plugin.
+# This is an optional function, called when EDMC reloads plugin.
 def plugin_reload():
     LOGGER.info("FleetCarrierDiscord plugin reloaded.")
 ```
