@@ -49,4 +49,3 @@ def plugin_stop():
 # This is an optional function, called when EDMC reloads plugin.
 def plugin_reload():
     LOGGER.info("FleetCarrierDiscord plugin reloaded.")
-```
