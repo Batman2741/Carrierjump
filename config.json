@@ -1,6 +1,35 @@
 {
   "discord_webhook_url": "https://discord.com/api/webhooks/REPLACE_ME/REPLACE_ME",
+  "carrier_name": "Spirula",
+  "carrier_callsign": "L14-X1J",
   "notify_jump_requests": true,
   "notify_jump_arrivals": true,
-  "timeout_seconds": 10
+  "timeout_seconds": 10,
+  "embed": {
+    "username": "ISSB Carrier Jumps",
+    "avatar_url": "",
+    "request": {
+      "title": "{carrier} jump scheduled",
+      "description": "",
+      "color": "#3498DB",
+      "fields": [
+        {"name": "Carrier", "value": "{carrier}", "inline": true},
+        {"name": "Destination", "value": "{destination}", "inline": true},
+        {"name": "Body", "value": "{body}", "inline": true},
+        {"name": "Departure", "value": "{departure_time}", "inline": false}
+      ],
+      "footer": "Elite Dangerous"
+    },
+    "arrival": {
+      "title": "{carrier} arrived",
+      "description": "",
+      "color": "#57F287",
+      "fields": [
+        {"name": "Carrier", "value": "{carrier}", "inline": true},
+        {"name": "System", "value": "{system}", "inline": true},
+        {"name": "Body", "value": "{body}", "inline": true}
+      ],
+      "footer": "Elite Dangerous"
+    }
+  }
 }
