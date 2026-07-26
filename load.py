@@ -233,7 +233,7 @@ def _read_error(exc):
 
 def _format_jump_request(entry):
     carrier = _carrier_name(entry)
-    destination = entry.get("DestinationSystem") or "unknown destination"
+    destination = entry.get("SystemName") or entry.get("DestinationSystem") or "unknown destination"
     departure = entry.get("DepartureTime")
 
     lines = [
