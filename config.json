@@ -1,0 +1,6 @@
+{
+  "discord_webhook_url": "https://discord.com/api/webhooks/REPLACE_ME/REPLACE_ME",
+  "notify_jump_requests": true,
+  "notify_jump_arrivals": true,
+  "timeout_seconds": 10
+}
