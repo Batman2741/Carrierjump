@@ -1,6 +1,6 @@
 {
   "discord_webhook_url": "https://discord.com/api/webhooks/REPLACE_ME/REPLACE_ME",
-  "carrier_name": "Spirula",
+  "carrier_name": "Example carrier name",
   "carrier_callsign": "L14-X1J",
   "notify_jump_requests": true,
   "notify_jump_arrivals": true,
