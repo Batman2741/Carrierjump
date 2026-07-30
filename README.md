@@ -1,6 +1,6 @@
-# ISSB EDMC Carrier Jump Plugin
+# EDMC Carrier Jump Plugin
 
-ISSB is an EDMarketConnector plugin for posting Elite Dangerous fleet carrier jump notifications to Discord.
+this is a EDMarketConnector plugin for posting Elite Dangerous fleet carrier jump notifications to Discord.
 
 ## What it does
 
@@ -14,7 +14,7 @@ ISSB is an EDMarketConnector plugin for posting Elite Dangerous fleet carrier ju
 1. Put this folder in your EDMarketConnector plugins directory.
 2. Make sure the folder contains `load.py`.
 3. Restart EDMarketConnector.
-4. Check EDMC Settings > Plugins and confirm `ISSB` is loaded.
+4. Check EDMC Settings > Plugins and confirm `CarrierJump` is loaded.
 
 ## Configure
 
@@ -29,7 +29,7 @@ Create a `config.json` file in the plugin folder:
   "notify_jump_arrivals": true,
   "timeout_seconds": 10,
   "embed": {
-    "username": "ISSB Carrier Jumps",
+    "username": "Carrier Jumps",
     "avatar_url": "",
     "request": {
       "title": "{carrier} jump scheduled",
