@@ -1,11 +1,3 @@
-'''
-replace the following values as needed:
-discord_webhook_url
-carrier_name
-carrier_callsign
-aside from that dont touch anything if you dont know what it is
-for any problems please make a issue on github at https://github.com/Batman2741/Carrierjump/issues thank you
-'''
 {
   "discord_webhook_url": "https://discord.com/api/webhooks/REPLACE_ME/REPLACE_ME",
   "carrier_name": "Example carrier name",
