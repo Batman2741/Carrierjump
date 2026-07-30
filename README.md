@@ -18,47 +18,18 @@ this is a EDMarketConnector plugin for posting Elite Dangerous fleet carrier jum
 
 ## Configure
 
-Create a `config.json` file in the plugin folder:
-
-```json
-{
-  "discord_webhook_url": "https://discord.com/api/webhooks/REPLACE_ME/REPLACE_ME",
-  "carrier_name": "Spirula",
-  "carrier_callsign": "L14-X1J",
-  "notify_jump_requests": true,
-  "notify_jump_arrivals": true,
-  "timeout_seconds": 10,
-  "embed": {
-    "username": "Carrier Jumps",
-    "avatar_url": "",
-    "request": {
-      "title": "{carrier} jump scheduled",
-      "description": "",
-      "color": "#3498DB",
-      "fields": [
-        {"name": "Carrier", "value": "{carrier}", "inline": true},
-        {"name": "Destination", "value": "{destination}", "inline": true},
-        {"name": "Body", "value": "{body}", "inline": true},
-        {"name": "Departure", "value": "{departure_time}", "inline": false}
-      ],
-      "footer": "Elite Dangerous"
-    },
-    "arrival": {
-      "title": "{carrier} arrived",
-      "description": "",
-      "color": "#57F287",
-      "fields": [
-        {"name": "Carrier", "value": "{carrier}", "inline": true},
-        {"name": "System", "value": "{system}", "inline": true},
-        {"name": "Body", "value": "{body}", "inline": true}
-      ],
-      "footer": "Elite Dangerous"
-    }
-  }
-}
+instructions for config
+'''
+replace the following values as needed:
+discord_webhook_url
+carrier_name
+carrier_callsign
+aside from that dont touch anything if you dont know what it is
+for any problems please make a issue on github at https://github.com/Batman2741/Carrierjump/issues thank you
+'''
 ```
 
-You can also set the webhook with the `ISSB_DISCORD_WEBHOOK_URL` environment variable. A value in `config.json` takes precedence over the environment variable.
+You can also set the webhook with the `DISCORD_WEBHOOK_URL` environment variable. A value in `config.json` takes precedence over the environment variable.
 
 The full example is available in `config.example.json`.
 
@@ -78,10 +49,6 @@ Embed titles, descriptions, footers, and field values can use these placeholders
 - `{departure_time}`: requested departure time.
 - `{event}`: journal event name.
 - `{timestamp}`: journal timestamp.
-
-## Notes
-
-- Do not commit a real Discord webhook URL. If one has been committed or shared, rotate it in Discord.
 - `CarrierJump` reports the arrival system as `StarSystem`; it does not reliably include `DestinationSystem`.
 - For advance jump calls, this plugin uses `CarrierJumpRequest`.
 - `CarrierJumpRequest` does not include the carrier's display name. The plugin learns the name from `CarrierStats` or `CarrierNameChanged`; set `carrier_name` and `carrier_callsign` in config if you want the correct name before those events appear.
